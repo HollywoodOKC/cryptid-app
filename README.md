@@ -1,5 +1,5 @@
-***Cryptid Database
+### Cryptid Database
 
-**open terminal to server folder: npm start
+## Open terminal to server folder: npm start
 
-**open terminal to cryptid-client folder: npm start
+## Open terminal to cryptid-client folder: npm start

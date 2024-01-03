@@ -7,7 +7,7 @@ const Cryptid = require('../../models/Cryptid');
 // @route GET apis/cryptids/test
 // @description tests books route
 // @access Public
-router.get('/test', (req, res) => res.send('cryptid route testing!'));
+router.get('/main', (req, res) => res.send('cryptid route testing!'));
 
 // @route GET apis/cryptids
 // @description Get all Cryptids

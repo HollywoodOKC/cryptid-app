@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { cryptidOfMonth } = require("../controllers/cryptidController");
+const { toggleCryptidStatus } = require("../controllers/cryptidController");
 
 // Load Book model
 const Cryptid = require('../../models/Cryptid');
@@ -57,6 +57,6 @@ router.delete('/:id', (req, res) => {
         .catch(err => res.status(404).json({ error: 'No such Cryptid!' }));
 });
 
-router.get("/cryptid/cryptidOfMonth/:id", toggleCryptidStatus);
+router.get("/cryptids/cryptidOfMonth/:id", toggleCryptidStatus);
 
 module.exports = router;

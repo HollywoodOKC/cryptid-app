@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { toggleCryptidStatus } = require("../controllers/cryptidController");
+const { toggleCryptidStatus } = require("../../controllers/cryptidController");
 
 // Load Book model
 const Cryptid = require('../../models/Cryptid');

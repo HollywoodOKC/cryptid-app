@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { toggleToDoStatus } = require("../controllers/cryptidController");
 
 // Load Book model
 const Cryptid = require('../../models/Cryptid');
@@ -55,5 +56,7 @@ router.delete('/:id', (req, res) => {
         .then(cryptids => res.json({ mgs: 'Cryptid entry deleted successfully' }))
         .catch(err => res.status(404).json({ error: 'No such Cryptid!' }));
 });
+
+router.get("/cryptid/toggleStatus/:id", toggleToDoStatus);
 
 module.exports = router;

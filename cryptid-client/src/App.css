@@ -92,6 +92,13 @@ p {
   font-weight: 300;
 }
 
+.cryptidButton, .label {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .desc h3 {
   color: #6c757d;
   font-size: 1em;

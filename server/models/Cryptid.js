@@ -20,10 +20,7 @@ const CryptidSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    cryptidOfMonth: {
-        type: Boolean,
-        default: false
-    }
+    
 });
 
 module.exports = Cryptid = mongoose.model('cryptid', CryptidSchema);

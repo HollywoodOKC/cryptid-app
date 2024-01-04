@@ -59,13 +59,6 @@ function UpdateCryptidInfo(props) {
             });
     };
 
-    const handleCryptidClick = (id) => {
-        axios
-            .get(`http://localhost:8082/api/cryptids/toggleStatus/${id}`)
-            .then((res) => setCryptid())
-            .catch((err) => console.error(err));
-    };
-
     return (
         <div className='UpdateCryptidInfo'>
             <div className='container'>
@@ -79,8 +72,6 @@ function UpdateCryptidInfo(props) {
                     <div className='col-md-8 m-auto'>
                         <h1 className='display-4 text-center'>Edit Cryptid Information</h1>
                         <p className='lead text-center'>Update Cryptid's Info</p>
-                        <input onClick={() => handleCryptidClick(cryptid._id)} type="checkbox" id="cryptidOfMonth" name="cryptidOfMonth" className="cryptidButton"></input>
-                        <label for="cryptidOfMonth" className="label">Cryptid Of The Month?</label>
                     </div>
                 </div>
 

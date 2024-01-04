@@ -52,12 +52,12 @@ function ShowCryptidDetails(props) {
                         <td>{cryptid.author}</td>
                     </tr>
                     <tr>
-                        <th scope='row'>4</th>
+                        <th scope='row'>5</th>
                         <td>Description</td>
                         <td>{cryptid.description}</td>
                     </tr>
                     <tr>
-                        <th scope='row'>5</th>
+                        <th scope='row'>6</th>
                         <td>Update</td>
                         <td>{cryptid.updated_date}</td>
                     </tr>

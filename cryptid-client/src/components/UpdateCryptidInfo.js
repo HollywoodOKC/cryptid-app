@@ -10,7 +10,7 @@ function UpdateCryptidInfo(props) {
         state: '',
         author: '',
         description: '',
-        cryptidOf_Month: false,
+        cryptidOf_month: false,
         published_date: '',
     });
 
@@ -26,7 +26,7 @@ function UpdateCryptidInfo(props) {
                     state: res.data.state,
                     author: res.data.author,
                     description: res.data.description,
-                    cryptidOf_Month: res.data.cryptidOf_Month,
+                    cryptidOf_month: res.data.cryptidOf_month,
                     published_date: res.data.published_date,
                 });
             })
@@ -47,7 +47,7 @@ function UpdateCryptidInfo(props) {
             state: cryptid.state,
             author: cryptid.author,
             description: cryptid.description,
-            cryptidOf_Month: cryptid.cryptidOf_Month,
+            cryptidOf_month: cryptid.cryptidOf_month,
             published_date: cryptid.published_date,
         };
 

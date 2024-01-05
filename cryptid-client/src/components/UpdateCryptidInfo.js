@@ -137,9 +137,9 @@ function UpdateCryptidInfo(props) {
                                 type='button'
                                 placeholder='Cryptid of Month?'
                                 name='cryptidOf_Month'
-                                value={cryptid.cryptidOf_Month}
+                                value={cryptid.cryptidOf_month}
                                 onChange={onChange}
-                            >
+                            />
                         </div>*/}
 
                         <button

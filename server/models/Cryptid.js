@@ -20,6 +20,10 @@ const CryptidSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    cryptidOf_month: {
+        type: Boolean,
+        default: false
+    }
     
 });
 

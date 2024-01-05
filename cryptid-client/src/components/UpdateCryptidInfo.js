@@ -10,7 +10,7 @@ function UpdateCryptidInfo(props) {
         state: '',
         author: '',
         description: '',
-        isCOM: false,
+        cryptidOf_Month: false,
         published_date: '',
     });
 

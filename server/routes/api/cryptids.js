@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Load Book model
+// Load Cryptid model
 const Cryptid = require('../../models/Cryptid');
 
 // @route GET apis/cryptids/test
@@ -15,7 +15,7 @@ router.get('/test', (req, res) => res.send('cryptid route testing!'));
 router.get('/', (req, res) => {
     Cryptid.find()
         .then(cryptids => res.json(cryptids))
-        .catch(err => res.status(404).json({ nocryptidfound: 'No Cryptids found' }));
+        .catch(err => res.status(404).json({ error: 'No Cryptids found' }));
 });
 
 // @route GET apis/cryptids/:id
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     Cryptid.findById(req.params.id)
         .then(cryptids => res.json(cryptids))
-        .catch(err => res.status(404).json({ nocryptidfound: 'No Cryptids found' }));
+        .catch(err => res.status(404).json({ error: 'No Cryptids found' }));
 });
 
 // @route GET apis/cryptids

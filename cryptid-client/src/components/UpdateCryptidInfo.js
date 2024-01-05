@@ -131,6 +131,17 @@ function UpdateCryptidInfo(props) {
                         </div>
                         <br />
 
+                        {/*<div className='form-group'>
+                            <label htmlFor='cryptidOf_Month'>Cryptid Of Month?</label>
+                            <button
+                                type='button'
+                                placeholder='Cryptid of Month?'
+                                name='cryptidOf_Month'
+                                value={cryptid.cryptidOf_Month}
+                                onChange={onChange}
+                            >
+                        </div>*/}
+
                         <button
                             type='submit'
                             className='btn btn-outline-info btn-lg btn-block'

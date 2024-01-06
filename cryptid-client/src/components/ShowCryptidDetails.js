@@ -58,6 +58,11 @@ function ShowCryptidDetails(props) {
                     </tr>
                     <tr>
                         <th scope='row'>6</th>
+                        <td>Cryptid of Month?</td>
+                        <td>{cryptid.cryptidOf_month}</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>7</th>
                         <td>Update</td>
                         <td>{cryptid.updated_date}</td>
                     </tr>

@@ -14,6 +14,13 @@ function UpdateCryptidInfo(props) {
         published_date: '',
     });
 
+    {/*const handleTodoClick = (id) => {
+        axios
+            .get(`http://localhost:8082/api/cryptids/${id}`)
+            .then((res) => setCryptid())
+            .catch((err) => console.error(err));
+    };*/}
+
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -139,8 +146,11 @@ function UpdateCryptidInfo(props) {
                                 name='cryptidOf_Month'
                                 value={cryptid.cryptidOf_month}
                                 onChange={onChange}
+                                onClick={() => handleTodoClick(cryptid.id)}
+                                className={cryptid.cryptidOf_month ? "COM!" : ""}
                             />
                         </div>*/}
+                        <br />
 
                         <button
                             type='submit'

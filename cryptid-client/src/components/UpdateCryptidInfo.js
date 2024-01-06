@@ -91,7 +91,7 @@ function UpdateCryptidInfo(props) {
                             <input
                                 type='text'
                                 placeholder='Name of Cryptid'
-                                name='title'
+                                id='title'
                                 className='form-control'
                                 value={cryptid.title}
                                 onChange={onChange}
@@ -104,7 +104,7 @@ function UpdateCryptidInfo(props) {
                             <input
                                 type='text'
                                 placeholder='State or Country'
-                                name='state'
+                                id='state'
                                 className='form-control'
                                 value={cryptid.state}
                                 onChange={onChange}
@@ -117,7 +117,7 @@ function UpdateCryptidInfo(props) {
                             <input
                                 type='text'
                                 placeholder='Author'
-                                name='author'
+                                id='author'
                                 className='form-control'
                                 value={cryptid.author}
                                 onChange={onChange}
@@ -130,7 +130,7 @@ function UpdateCryptidInfo(props) {
                             <textarea
                                 type='text'
                                 placeholder='Description of the Cryptid'
-                                name='description'
+                                id='description'
                                 className='form-control'
                                 value={cryptid.description}
                                 onChange={onChange}
@@ -142,7 +142,7 @@ function UpdateCryptidInfo(props) {
                             <input
                                 type='checkbox'
                                 placeholder='Cryptid of Month?'
-                                name='cryptidOf_month'
+                                id='cryptidOf_month'
                                 value={cryptid.cryptidOf_month}
                                 onChange={onChange}
                                 onClick={() => handleTodoClick(cryptid.id)}

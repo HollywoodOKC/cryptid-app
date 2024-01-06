@@ -14,12 +14,12 @@ function UpdateCryptidInfo(props) {
         published_date: '',
     });
 
-    {/*const handleTodoClick = (id) => {
+    const handleTodoClick = (id) => {
         axios
             .get(`http://localhost:8082/api/cryptids/${id}`)
             .then((res) => setCryptid())
             .catch((err) => console.error(err));
-    };*/}
+    };
 
     const { id } = useParams();
     const navigate = useNavigate();
@@ -138,18 +138,18 @@ function UpdateCryptidInfo(props) {
                         </div>
                         <br />
 
-                        {/*<div className='form-group'>
-                            <label htmlFor='cryptidOf_Month'>Cryptid Of Month?</label>
-                            <button
-                                type='button'
+                        <div className='form-check'>
+                            <input
+                                type='checkbox'
                                 placeholder='Cryptid of Month?'
-                                name='cryptidOf_Month'
+                                name='cryptidOf_month'
                                 value={cryptid.cryptidOf_month}
                                 onChange={onChange}
                                 onClick={() => handleTodoClick(cryptid.id)}
-                                className={cryptid.cryptidOf_month ? "COM!" : ""}
+                                className='form-check-input'
                             />
-                        </div>*/}
+                            <label className="form-check-label" htmlFor='cryptidOf_month'>Cryptid Of Month?</label>
+                        </div>
                         <br />
 
                         <button

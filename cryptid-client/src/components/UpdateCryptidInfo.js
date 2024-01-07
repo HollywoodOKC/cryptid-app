@@ -145,7 +145,7 @@ function UpdateCryptidInfo(props) {
                                 id='cryptidOf_month'
                                 value={cryptid.cryptidOf_month}
                                 onChange={onChange}
-                                onClick={() => handleTodoClick(cryptid.id)}
+                                onClick={handleTodoClick(cryptid.id)}
                                 className='form-check-input'
                             />
                             <label className="form-check-label" htmlFor='cryptidOf_month'>Cryptid Of Month?</label>

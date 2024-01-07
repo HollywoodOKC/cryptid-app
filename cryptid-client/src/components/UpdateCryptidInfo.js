@@ -14,12 +14,14 @@ function UpdateCryptidInfo(props) {
         published_date: '',
     });
 
-    const handleTodoClick = (id) => {
+    {/*function handleTodoClick(id) {
         axios
             .get(`http://localhost:8082/api/cryptids/${id}`)
-            .then((res) => setCryptid())
+            .then((res) => setCryptid({
+                cryptidOf_month: cryptidOf_month === !cryptidOf_month,
+            }))
             .catch((err) => console.error(err));
-    };
+    };*/}
 
     const { id } = useParams();
     const navigate = useNavigate();
@@ -145,7 +147,7 @@ function UpdateCryptidInfo(props) {
                                 id='cryptidOf_month'
                                 value={cryptid.cryptidOf_month}
                                 onChange={onChange}
-                                onClick={handleTodoClick(cryptid.id)}
+                                //onClick={handleTodoClick(cryptid.id)}
                                 className='form-check-input'
                             />
                             <label className="form-check-label" htmlFor='cryptidOf_month'>Cryptid Of Month</label>

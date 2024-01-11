@@ -14,15 +14,6 @@ function UpdateCryptidInfo(props) {
         published_date: '',
     });
 
-    {/*function handleTodoClick(id) {
-        axios
-            .get(`http://localhost:8082/api/cryptids/${id}`)
-            .then((res) => setCryptid({
-                cryptidOf_month: cryptidOf_month === !cryptidOf_month,
-            }))
-            .catch((err) => console.error(err));
-    };*/}
-
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -35,7 +26,7 @@ function UpdateCryptidInfo(props) {
                     state: res.data.state,
                     author: res.data.author,
                     description: res.data.description,
-                    cryptidOf_month: res.data.cryptidOf_month,
+                    cryptidOf_month: false,
                     published_date: res.data.published_date,
                 });
             })
@@ -43,6 +34,14 @@ function UpdateCryptidInfo(props) {
                 console.log(err.message);
             });
     }, [id]);
+
+    const truth = (e) => {
+        if (e.target.checked) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     const onChange = (e) => {
         setCryptid({ ...cryptid, [e.target.name]: e.target.value });
@@ -56,7 +55,7 @@ function UpdateCryptidInfo(props) {
             state: cryptid.state,
             author: cryptid.author,
             description: cryptid.description,
-            cryptidOf_month: cryptid.cryptidOf_month,
+            cryptidOf_month: true,
             published_date: cryptid.published_date,
         };
 
@@ -147,7 +146,7 @@ function UpdateCryptidInfo(props) {
                                 id='cryptidOf_month'
                                 value={cryptid.cryptidOf_month}
                                 onChange={onChange}
-                                //onClick={handleTodoClick(cryptid.id)}
+                                onClick={truth}
                                 className='form-check-input'
                             />
                             <label className="form-check-label" htmlFor='cryptidOf_month'>Cryptid Of Month</label>

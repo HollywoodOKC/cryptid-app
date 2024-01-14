@@ -10,7 +10,7 @@ function UpdateCryptidInfo(props) {
         state: '',
         author: '',
         description: '',
-        cryptidOf_month: false,
+        cryptidOf_month: true,
         published_date: '',
     });
 
@@ -35,12 +35,12 @@ function UpdateCryptidInfo(props) {
             });
     }, [id]);
 
-    const truth = (e) => {
-        if (e.target.checked) {
-            return true;
-        } else {
-            return false;
-        }
+    const truth = () => {
+        axios.put("http://localhost:3000/api/userInfo/", setCryptid)
+            .then(response => {
+                console.log(response);
+            })
+            .catch(error => console.log(error))
     }
 
     const onChange = (e) => {
@@ -55,7 +55,7 @@ function UpdateCryptidInfo(props) {
             state: cryptid.state,
             author: cryptid.author,
             description: cryptid.description,
-            cryptidOf_month: true,
+            cryptidOf_month: cryptid.cryptidOf_month,
             published_date: cryptid.published_date,
         };
 

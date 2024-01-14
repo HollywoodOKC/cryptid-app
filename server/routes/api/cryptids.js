@@ -57,6 +57,8 @@ router.delete('/:id', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
+    const { cryptidOf_month } = req.body;
+    Cryptid.cryptidOf_month = cryptidOf_month;
     Cryptid.findByIdAndUpdate(req.params.id, req.body)
     .then(cryptids => res.json({ msgs: 'Updated Cryptid of Month'}))
     .catch(err => res.status(404).json({ error: `Can't update Cryptid of the Month`}));

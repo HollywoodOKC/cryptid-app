@@ -19,7 +19,7 @@ function UpdateCryptidInfo(props) {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8082/api/cryptids/${id}`)
+            .get(`http://192.168.0.6:8082/api/cryptids/${id}`)
             .then((res) => {
                 setCryptid({
                     title: res.data.title,
@@ -36,7 +36,7 @@ function UpdateCryptidInfo(props) {
     }, [id]);
 
     const truth = () => {
-        axios.put("http://localhost:3000/api/userInfo/", setCryptid)
+        axios.put("http://192.168.0.6:8082/api/cryptids/", UpdateCryptidInfo)
             .then(response => {
                 console.log(response);
             })
@@ -60,7 +60,7 @@ function UpdateCryptidInfo(props) {
         };
 
         axios
-            .put(`http://localhost:8082/api/cryptids/${id}`, data)
+            .put(`http://192.168.0.6:8082/api/cryptids/${id}`, data)
             .then((res) => {
                 navigate(`/show-cryptid/${id}`);
             })

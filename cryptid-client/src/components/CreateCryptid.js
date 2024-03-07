@@ -22,7 +22,7 @@ const CreateCryptid = (props) => {
         e.preventDefault();
 
         axios
-            .post('http://localhost:8082/api/cryptids', cryptid)
+            .post('http://192.168.0.6:8082/api/cryptids', cryptid)
             .then((res) => {
                 setCryptid({
                     title: '',

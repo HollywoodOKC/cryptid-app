@@ -17,4 +17,4 @@ app.use('/api/cryptids', cryptids);
 
 const PORT = process.env.PORT || 8082;
 
-app.listen(PORT, () => console.log(`Server running on Port: ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`Server running on Port: ${PORT}`));

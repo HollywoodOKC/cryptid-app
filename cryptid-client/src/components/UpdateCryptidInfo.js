@@ -38,6 +38,7 @@ function UpdateCryptidInfo(props) {
     const truth = () => {
         axios.put("http://192.168.0.6:8082/api/cryptids/", UpdateCryptidInfo)
             .then(response => {
+                response.data.cryptidOf_month = !response.data.cryptidOf_month;
                 console.log(response);
             })
             .catch(error => console.log(error))

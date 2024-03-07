@@ -10,7 +10,7 @@ function ShowCryptidList() {
 
     useEffect(() => {
         axios
-            .get('http://192.168.0.6:8082/api/cryptids')
+            .get('http://192.168.0.7:8082/api/cryptids')
             .then((res) => {
                 setCryptid(res.data);
             })

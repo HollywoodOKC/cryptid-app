@@ -12,7 +12,7 @@ function ShowCryptidDetails(props) {
 
     useEffect(() => {
         axios
-            .get(`http://192.168.0.6:8082/api/cryptids/${id}`)
+            .get(`http://192.168.0.7:8082/api/cryptids/${id}`)
             .then((res) => {
                 setCryptid(res.data);
             })
@@ -23,7 +23,7 @@ function ShowCryptidDetails(props) {
 
     const onDeleteClick = () => {
         axios
-            .delete(`http://192.168.0.6:8082/api/cryptids/${id}`)
+            .delete(`http://192.168.0.7:8082/api/cryptids/${id}`)
             .then((res) => {
                 navigate('/');
             })

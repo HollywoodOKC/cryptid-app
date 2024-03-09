@@ -15,7 +15,7 @@ const CryptidCard = (props) => {
             />
             <div className='desc'>
                 <h2>
-                    <Link to={`/show-cryptid/${cryptid._id}`}>{cryptid.title}</Link>
+                    <Link id="cryptidName" to={`/show-cryptid/${cryptid._id}`}>{cryptid.title}</Link>
                 </h2>
                 <h3 className='author'>{cryptid.author}</h3>
                 <p className='description'>{cryptid.description}</p>

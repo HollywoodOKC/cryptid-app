@@ -41,7 +41,6 @@
   margin: 0 auto;
   border-radius: 5px;
   overflow: scroll;
-  text-decoration: none;
   text-align: center;
 }
 
@@ -53,6 +52,11 @@
 .desc h2 {
   font-size: 1em;
   font-weight: 400;
+  color: hsl(0, 0%, 100%);
+}
+
+#cryptidName {
+  color: inherit;
 }
 
 .desc h3,

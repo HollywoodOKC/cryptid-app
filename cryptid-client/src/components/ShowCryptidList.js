@@ -30,7 +30,7 @@ function ShowCryptidList() {
                 <div className='row'>
                     <div className='col-md-12'>
                         <br />
-                        <h2 className='display-4 text-center'>Cryptids List</h2>
+                        <h2 className='display-4 text-center'>Cryptids Database</h2>
                     </div>
 
                     <div className='col-md-11'>
